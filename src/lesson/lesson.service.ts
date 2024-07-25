@@ -25,4 +25,8 @@ export class LessonService {
   getLesson(id: string): Promise<Lesson> {
     return this.lessonRepository.findOne({ where: { id } });
   }
+
+  getLessons(): Promise<Lesson[]> {
+    return this.lessonRepository.find();
+  }
 }
