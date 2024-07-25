@@ -13,3 +13,7 @@ type Lesson {
 type Query {
   lesson: Lesson!
 }
+
+type Mutation {
+  createLesson(name: String!, startDate: String!, endDate: String!): Lesson!
+}
