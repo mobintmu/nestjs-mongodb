@@ -10,6 +10,12 @@ type Lesson {
   createdAt: String!
 }
 
+type Student {
+  id: String!
+  firstName: String!
+  lastName: String!
+}
+
 type Query {
   lesson(id: String!): Lesson!
   lessons: [Lesson!]!
@@ -17,10 +23,16 @@ type Query {
 
 type Mutation {
   createLesson(createLessonInput: CreateLessonInput!): Lesson!
+  createStudent(createStudentInput: CreateStudentInput!): Student!
 }
 
 input CreateLessonInput {
   name: String!
   startDate: String!
   endDate: String!
+}
+
+input CreateStudentInput {
+  firstName: String!
+  lastName: String!
 }
