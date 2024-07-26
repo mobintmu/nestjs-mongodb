@@ -20,6 +20,7 @@ type Query {
   lesson(id: String!): Lesson!
   lessons: [Lesson!]!
   students: [Student!]!
+  student(id: String!): Student!
 }
 
 type Mutation {
